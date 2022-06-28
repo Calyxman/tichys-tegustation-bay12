@@ -9,3 +9,7 @@
 		/obj/item/stack/medical/bruise_pack = 1,
 		/obj/item/stack/medical/ointment = 1,
 		/obj/item/stack/medical/splint/ghetto = 1)
+
+/obj/item/stamp/approved
+	name = "\improper APPROVED rubber stamp"
+	icon_state = "stamp-approve"
