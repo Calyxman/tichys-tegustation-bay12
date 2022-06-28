@@ -167,10 +167,6 @@ GLOBAL_LIST_INIT(zombie_species, list(\
 		else if (M.head && (M.head.item_flags & ITEM_FLAG_AIRTIGHT)) // If they're protected by a helmet
 			continue
 
-		var/vuln = 1 - M.get_blocked_ratio(null, TOX, damage_flags = DAM_BIO) //Are they protected by hazmat clothing?
-		if (vuln > 0.10 && prob(10))
-			M.reagents.add_reagent(/datum/reagent/zombie, 0.5) //Infect 'em
-
 	if (H && H.stat != CONSCIOUS)
 		addtimer(CALLBACK(src, .proc/handle_death_infection, H), 1 SECOND)
 
